@@ -58,7 +58,7 @@ class MLPClassifierDeepResidual(nn.Module):
         x = x.view(x.size(0), -1)
         x = self.relu(self.input_layer(x))
         for layer in self.hidden_layers:
-            x = self.relu(layer(x)) + x  # Residual connection
+            x = self.relu(layer(x)) + x 
         return self.output_layer(x)
 
 
